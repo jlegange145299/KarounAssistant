@@ -243,7 +243,7 @@ def main():
                     {"role": "assistant", "content": processed_response}
                 )    
             print(f"MESSAGES: {st.session_state.messages}")                                                                
-            video_url = generate_video(processed_response[:350])            
+            video_url = generate_video(processed_response[:50])            
             st.sidebar.write(f'<video controls autoplay><source src="{video_url}" type="video/mp4"></video>', unsafe_allow_html=True)
               
             with st.chat_message("assistant"):
